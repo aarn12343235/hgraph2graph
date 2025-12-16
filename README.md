@@ -37,7 +37,10 @@ Use the steps below to prepare a fresh Colab runtime for running the example scr
    ```
 5. (Optional) Quick sanity check that the core libraries load:
    ```
-   import torch, rdkit, networkx, numpy
+   import torch
+   import rdkit
+   import networkx
+   import numpy
    import hgraph
    print("Environment ready.")
    ```
