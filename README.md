@@ -19,7 +19,7 @@ Use the steps below to prepare a fresh Colab runtime for running the example scr
 1. In Colab, switch to a GPU runtime: **Runtime → Change runtime type → GPU**.
 2. Clone the repo and move into it:
    ```
-   !git clone https://github.com/aarn12343235/hgraph2graph.git
+   !git clone https://github.com/aarn12343235/hgraph2graph.git  # use your fork URL if different
    %cd hgraph2graph
    ```
 3. Install the Python dependencies (PyTorch is already available in Colab; reinstall a specific version if you need to):
