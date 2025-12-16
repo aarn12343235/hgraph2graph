@@ -13,6 +13,38 @@ First install the dependencies via conda:
 And then run `pip install .`. Additional dependency for property-guided finetuning:
  * Chemprop >= 1.2.0
 
+## Google Colab setup
+Use the steps below to prepare a fresh Colab runtime for running the example scripts.
+
+1. In Colab, switch to a GPU runtime: **Runtime → Change runtime type → GPU**.
+2. Clone the repo (use your fork or this repository’s URL) and move into it:
+   ```
+   !git clone https://github.com/<your-username>/hgraph2graph.git
+   %cd hgraph2graph
+   ```
+   Replace `<your-username>` with your GitHub username (or the organization name) for the repository you want to run.
+3. Install the Python dependencies (PyTorch is already available in Colab; reinstall a specific version if you need to):
+   ```
+   !pip install -r requirements-colab.txt
+   ```
+   For property-guided finetuning, also install Chemprop:
+   ```
+   !pip install "chemprop>=1.2.0"
+   ```
+4. Make the repository importable in the notebook session:
+   ```
+   import sys, os
+   sys.path.append(os.getcwd())
+   ```
+5. (Optional) Quick sanity check that the core libraries load:
+   ```
+   import torch
+   import rdkit
+   import networkx
+   import numpy
+   import hgraph
+   print("Environment ready.")
+   ```
 
 ## Data Format
 * For graph generation, each line of a training file is a SMILES string of a molecule
@@ -92,4 +124,3 @@ python translate.py --test data/qed/valid.txt --vocab data/qed/vocab.txt --model
 ## Polymer generation
 The polymer generation code is in the `polymer/` folder. The polymer generation code is similar to `train_generator.py`, but the substructures are tailored for polymers. 
 For generating regular drug like molecules, we recommend to use `train_generator.py` in the root directory.
-
