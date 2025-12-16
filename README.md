@@ -17,11 +17,12 @@ And then run `pip install .`. Additional dependency for property-guided finetuni
 Use the steps below to prepare a fresh Colab runtime for running the example scripts.
 
 1. In Colab, switch to a GPU runtime: **Runtime → Change runtime type → GPU**.
-2. Clone the repo and move into it:
+2. Clone the repo (use your fork or this repository’s URL) and move into it:
    ```
-   !git clone https://github.com/aarn12343235/hgraph2graph.git  # use your fork URL if different
+   !git clone https://github.com/<your-username>/hgraph2graph.git
    %cd hgraph2graph
    ```
+   Replace `<your-username>` with `aarn12343235` if you want to use this repository directly.
 3. Install the Python dependencies (PyTorch is already available in Colab; reinstall a specific version if you need to):
    ```
    !pip install -r requirements-colab.txt
